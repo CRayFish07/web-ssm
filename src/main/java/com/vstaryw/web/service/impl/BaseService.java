@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package main.java.com.vstaryw.web.service.impl;
+package com.vstaryw.web.service.impl;
 
 import com.vstaryw.web.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;

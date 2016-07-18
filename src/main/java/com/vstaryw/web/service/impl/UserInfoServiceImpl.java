@@ -1,4 +1,4 @@
-package main.java.com.vstaryw.web.service.impl;
+package com.vstaryw.web.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.vstaryw.web.model.UserInfo;

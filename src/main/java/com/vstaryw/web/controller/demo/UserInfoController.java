@@ -1,4 +1,4 @@
-package main.java.com.vstaryw.web.controller.demo;
+package com.vstaryw.web.controller.demo;
 
 import com.github.pagehelper.Page;
 import com.vstaryw.web.mapper.UserInfoMapper;
