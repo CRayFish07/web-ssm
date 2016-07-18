@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package main.java.com.vstaryw.web.mapper;
+package com.vstaryw.web.mapper;
 
 
 import com.vstaryw.web.model.UserLoginInfo;

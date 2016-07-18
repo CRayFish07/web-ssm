@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package main.java.com.vstaryw.web.model;
+package com.vstaryw.web.model;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;

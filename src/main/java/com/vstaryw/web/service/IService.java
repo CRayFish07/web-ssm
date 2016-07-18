@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package main.java.com.vstaryw.web.service;
+package com.vstaryw.web.service;
 
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package main.java.com.vstaryw.web.util;
+package com.vstaryw.web.util;
 
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;

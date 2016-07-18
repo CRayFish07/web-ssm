@@ -1,4 +1,4 @@
-package main.java.com.vstaryw.web.util.exception;
+package com.vstaryw.web.util.exception;
 
 
 public class ServiceException extends RuntimeException {

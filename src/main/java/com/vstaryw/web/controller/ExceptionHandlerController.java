@@ -1,4 +1,4 @@
-package main.java.com.vstaryw.web.controller;
+package com.vstaryw.web.controller;
 
 import com.vstaryw.web.util.ResultInfo;
 import com.vstaryw.web.util.exception.ProcessException;
