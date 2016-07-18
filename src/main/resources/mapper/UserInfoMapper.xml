@@ -18,11 +18,8 @@
 
   <select id="getUserInfo" parameterType="long" resultType="Map">
     SELECT
-    u.*,
-    uli.logindate AS logindate,
-    uli.loginip as loginip
-    FROM user_info AS u LEFT JOIN user_login_info AS uli
-    ON u.username = uli.username
+    u.*
+    FROM user_info AS u
     <where>
       <if test="id != null">
         and u.id = #{id}

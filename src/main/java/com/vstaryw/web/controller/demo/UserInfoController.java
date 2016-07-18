@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author yuw
@@ -32,7 +34,11 @@ public class UserInfoController {
     @ResponseBody
     public Object getUserList(UserInfo userInfo, @RequestParam("pageNo")int pageNo,@RequestParam(value="pageSize",defaultValue = "10")int pageSize){
         Page<UserInfo> page = (Page<UserInfo>) userInfoService.getUserInfoList(userInfo,pageNo,pageSize);
-        return page;
+        Map<String,Object> map = new HashMap<>();
+        map.put("list",page.getResult());
+        map.put("total",page.getTotal());
+        map.put("pages",page.getPages());
+        return map;
     }
 
     @RequestMapping("get/{usertype}")
