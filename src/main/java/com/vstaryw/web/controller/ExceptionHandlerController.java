@@ -2,6 +2,8 @@ package com.vstaryw.web.controller;
 
 import com.vstaryw.web.util.ResultInfo;
 import com.vstaryw.web.util.exception.ProcessException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,9 +18,12 @@ import javax.servlet.http.HttpServletRequest;
 @ControllerAdvice
 public class ExceptionHandlerController {
 
+    Logger log = LoggerFactory.getLogger(ExceptionHandlerController.class);
+
     @ExceptionHandler
     @ResponseBody
     public Object exceptionHandler(HttpServletRequest request,Exception ex){
+        log.error(ex.getMessage(),ex);
         ResultInfo resultInfo= new ResultInfo();
         if(ex instanceof ProcessException){
             resultInfo.setErrorCode(((ProcessException) ex).getErrorCode());
