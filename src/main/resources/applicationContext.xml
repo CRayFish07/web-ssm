@@ -64,28 +64,12 @@
         <constructor-arg index="0" ref="sqlSessionFactory"/>
     </bean>
 
-    <aop:aspectj-autoproxy/>
-
-    <aop:config>
-        <aop:pointcut id="appService" expression="execution(* com.vstaryw.web.service..*Service*.*(..))"/>
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="appService"/>
-    </aop:config>
-
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
-        <tx:attributes>
-            <tx:method name="select*" read-only="true"/>
-            <tx:method name="find*" read-only="true"/>
-            <tx:method name="get*" read-only="true"/>
-            <tx:method name="*"/>
-        </tx:attributes>
-    </tx:advice>
-
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <!-- 开启事务控制的注解支持 -->
-    <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
+     开启事务控制的注解支持
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
 
 </beans>
